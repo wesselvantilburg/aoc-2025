@@ -1,3 +1,4 @@
+import { duration } from "./duration";
 import { fetchInputByDay } from "./input";
 
-export { fetchInputByDay };
+export { duration, fetchInputByDay };

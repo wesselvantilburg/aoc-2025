@@ -1,12 +1,14 @@
 import { duration, fetchInputByDay } from "@/utils";
 
 function solve(input: string): number {
-  const lines = input.split(",");
+  const lines = input
+    .split(",")
+    .map((line) => line.split("-").map((str) => parseInt(str, 10)));
 
   let total = 0;
 
   for (const line of lines) {
-    const [min, max] = line.split("-").map((str) => parseInt(str, 10));
+    const [min, max] = line;
 
     if (!min || !max) continue;
 

@@ -11,13 +11,12 @@ function solve(input: string): number {
     if (!min || !max) continue;
 
     for (let i = min; i <= max; i++) {
-      const str = String(i);
-      if (str.length % 2 !== 0) continue;
+      const str = i.toString();
+      const count = str.length;
 
-      if (
-        str.slice(0, str.length / 2) !== str.slice(str.length / 2, str.length)
-      )
-        continue;
+      if (count % 2 !== 0) continue;
+
+      if (str.slice(0, count / 2) !== str.slice(count / 2)) continue;
 
       total += i;
     }

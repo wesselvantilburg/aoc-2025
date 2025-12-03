@@ -4,10 +4,15 @@ import fs from "fs";
 const BASE_URL = "https://adventofcode.com";
 const YEAR = "2025";
 const FILE_NAME = "input.txt";
+const FILE_NAME_TEST = "input.test.txt";
 
-function getInputPathByDay(day: number): string {
+function getInputPathByDay(day: number, test: boolean): string {
   const paddedDay = day.toString().padStart(2, "0");
-  const pathName = path.join("src/days", paddedDay, FILE_NAME);
+  const pathName = path.join(
+    "src/days",
+    paddedDay,
+    test ? FILE_NAME_TEST : FILE_NAME
+  );
   return path.resolve(pathName);
 }
 
@@ -21,8 +26,11 @@ async function fetchInput(day: number): Promise<string> {
   return (await response.text()).trimEnd();
 }
 
-export async function fetchInputByDay(day: number): Promise<string> {
-  const inputPath = getInputPathByDay(day);
+export async function fetchInputByDay(
+  day: number,
+  test: boolean = false
+): Promise<string> {
+  const inputPath = getInputPathByDay(day, test);
   const inputExists = fs.existsSync(inputPath);
 
   const input = inputExists

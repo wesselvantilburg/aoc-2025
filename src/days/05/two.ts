@@ -45,7 +45,7 @@ function getCombinedRanges(ranges: { min: number; max: number }[]) {
         break;
       }
 
-      // A.min fits inside B, A max is outside B -> B.max = A.max
+      // B.min fits inside A, B max is outside A -> A.max = B.max
       if (b.min >= a.min && b.min <= a.max && b.max >= a.max) {
         a.max = b.max;
         index = 0;

@@ -22,3 +22,5 @@ This repository contains my solutions for the Advent of Code 2025 challenges. Th
 | 5.2 |                     | [05/two.ts](src/days/05/two.ts) | Easy       | `7.04`        |
 | 6.1 | Trash Compactor     | [06/one.ts](src/days/06/one.ts) | Easy       | `2.80`        |
 | 6.2 |                     | [06/two.ts](src/days/06/two.ts) | Easy       | `3.60`        |
+| 7.1 | Laboratories        | [07/one.ts](src/days/07/one.ts) | Easy       | `0.76`        |
+| 7.2 |                     | [07/two.ts](src/days/07/two.ts) | Medium     | `1.08`        |

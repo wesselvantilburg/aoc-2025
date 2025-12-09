@@ -24,3 +24,4 @@ This repository contains my solutions for the Advent of Code 2025 challenges. Th
 | 6.2 |                     | [06/two.ts](src/days/06/two.ts) | Easy       | `3.60`        |
 | 7.1 | Laboratories        | [07/one.ts](src/days/07/one.ts) | Easy       | `0.76`        |
 | 7.2 |                     | [07/two.ts](src/days/07/two.ts) | Medium     | `1.08`        |
+| 8.1 | Playground          | [08/one.ts](src/days/08/one.ts) | Medium     | `419.72`      |
